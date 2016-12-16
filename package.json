@@ -1,0 +1,22 @@
+{
+  "name": "agraddy.test.tap",
+  "version": "0.1.0",
+  "description": "Coming soon.",
+  "main": "index.js",
+  "author": "Anthony Graddy",
+  "license": "MIT",
+  "homepage": "https://github.com/agraddy/agraddy.test.tap#readme",
+  "scripts": {
+    "test": "node ./test"
+  },
+  "repository": {
+	  "type": "git",
+	  "url": "git://github.com/agraddy/agraddy.test.tap.git"
+  },
+  "bugs": {
+	  "url": "https://github.com/agraddy/agraddy.test.tap/issues"
+  },
+  "devDependencies": {
+	  "tape": "^4.6.3"
+  }
+}
