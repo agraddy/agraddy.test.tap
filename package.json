@@ -6,6 +6,9 @@
   "author": "Anthony Graddy",
   "license": "MIT",
   "homepage": "https://github.com/agraddy/agraddy.test.tap#readme",
+  "engines" : {
+    "node" : ">=6.9.2" 
+  },
   "scripts": {
     "test": "node ./test"
   },
