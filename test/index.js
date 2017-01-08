@@ -1,17 +1,5 @@
-var tap = require('../')(__filename);
-
-setTimeout(function() {
-	tap.assert(false, 'First should fail.')
-}, 100);
-
-tap.assert.equal(true, false, 'Second should fail.');
-
-tap.assert.equal(true, true, 'Third should pass.');
-
-tap.assert.deepEqual(true, true, 'Fourth should pass.');
-
-
-/* Should output something like:
+// SHOULD OUTPUT SOMETHING LIKE:
+/*
 TAP version 13
 not ok 1 - First should fail.
   ---
@@ -28,9 +16,26 @@ not ok 2 - Second should fail.
   ...
 ok 3 - Third should pass.
 ok 4 - Fourth should pass.
+ok 5 - Fifth should pass.
 
-1..4
-# tests 4
-# pass  2
+1..5
+# tests 5
+# pass  3
 # fail  2
 */
+
+var tap = require('../')(__filename);
+
+setTimeout(function() {
+	tap.assert(false, 'First should fail.')
+}, 100);
+
+tap.assert.equal(true, false, 'Second should fail.');
+
+tap.assert.equal(true, true, 'Third should pass.');
+
+tap.assert.deepEqual(true, true, 'Fourth should pass.');
+
+tap.assert.notDeepEqual(true, false, 'Fifth should pass.');
+
+
