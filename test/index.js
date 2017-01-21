@@ -38,4 +38,11 @@ tap.assert.deepEqual(true, true, 'Fourth should pass.');
 
 tap.assert.notDeepEqual(true, false, 'Fifth should pass.');
 
+// Do not include commentted out asserts
+//tap.assert(true, 'Should be skipped because commentted out.');
+
+/*
+tap.assert(true, 'Should be skipped because commentted out.');
+*/
+
 
