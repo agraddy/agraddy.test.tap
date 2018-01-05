@@ -1,3 +1,7 @@
+// SINCE THIS IS A TESTING LIBRARY THE TESTS ARE SETUP A LITTLE DIFFERENT THAN NORMAL
+// OUTPUT SHOULD BE MANUALLY COMPARED TO EXPECTED OUTPUT THAT IS COMMENTED OUT AT 
+// THE TOP OF EACH TEST FILE
+//
 // SHOULD OUTPUT SOMETHING LIKE:
 /*
 TAP version 13
@@ -38,11 +42,11 @@ tap.assert.deepEqual(true, true, 'Fourth should pass.');
 
 tap.assert.notDeepEqual(true, false, 'Fifth should pass.');
 
-// Do not include commentted out asserts
-//tap.assert(true, 'Should be skipped because commentted out.');
+// Do not include commented out asserts
+//tap.assert(true, 'Should be skipped because commented out.');
 
 /*
-tap.assert(true, 'Should be skipped because commentted out.');
+tap.assert(true, 'Should be skipped because commented out.');
 */
 
 

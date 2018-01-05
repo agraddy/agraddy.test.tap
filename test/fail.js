@@ -1,0 +1,8 @@
+// SINCE THIS IS A TESTING LIBRARY THE TESTS ARE SETUP A LITTLE DIFFERENT THAN NORMAL
+// OUTPUT SHOULD BE MANUALLY COMPARED TO EXPECTED OUTPUT THAT IS COMMENTED OUT AT 
+// THE TOP OF EACH TEST FILE
+//
+// SHOULD THROW AN ERROR IF NO FILENAME IS PASSED
+var tap = require('../');
+
+tap.assert.equal('fail', 'fail', 'Should never be reached since a filename is not passed in.');
