@@ -1,11 +1,11 @@
-// CONSIDERING DEPRECATING tap.start() AND tap.end() FOR tap.include()
-// ALTHOUGH tap.start() AND tap.end() are used in tap.include()
-//
 // SINCE THIS IS A TESTING LIBRARY THE TESTS ARE SETUP A LITTLE DIFFERENT THAN NORMAL
 // OUTPUT SHOULD BE MANUALLY COMPARED TO EXPECTED OUTPUT THAT IS COMMENTED OUT AT 
 // THE TOP OF EACH TEST FILE
 //
-// MULTIPLE FILES SHOULD OUTPUT SOMETHING LIKE:
+// MULTIPLE FILES SHOULD REQUIRE IN SERIES WHEN USING tap.include
+// tap.include REQUIRES ONE FILE AT A TIME
+//
+// SHOULD OUTPUT SOMETHING LIKE THIS:
 /*
 TAP version 13
 ok 1 - One should pass.
@@ -25,8 +25,6 @@ not ok 3 - Three should fail.
 */
 
 var tap = require('../')(__filename);
-tap.start();
-require('./one.js');
-require('./two.js');
-require('./three.js');
-tap.end();
+tap.include('./one.js');
+tap.include('./two.js');
+tap.include('./three.js');
