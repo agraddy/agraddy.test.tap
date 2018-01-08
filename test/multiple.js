@@ -8,6 +8,11 @@
 // MULTIPLE FILES SHOULD OUTPUT SOMETHING LIKE:
 /*
 TAP version 13
+ONE START
+TWO START
+TWO END
+THREE START
+THREE END
 ok 1 - One should pass.
 ok 2 - Two should pass.
 not ok 3 - Three should fail.
@@ -22,6 +27,7 @@ not ok 3 - Three should fail.
 # tests 3
 # pass  2
 # fail  1
+ONE END
 */
 
 var tap = require('../')(__filename);

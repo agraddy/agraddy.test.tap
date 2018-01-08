@@ -8,8 +8,13 @@
 // SHOULD OUTPUT SOMETHING LIKE THIS:
 /*
 TAP version 13
+ONE START
 ok 1 - One should pass.
+ONE END
+TWO START
 ok 2 - Two should pass.
+TWO END
+THREE START
 not ok 3 - Three should fail.
   ---
   operator: equal
@@ -17,6 +22,7 @@ not ok 3 - Three should fail.
   expected: THREE
   at: Object.<anonymous> (/var/www/projects/os/agraddy.test.tap/test/three.js:8:12)
   ...
+THREE END
 
 1..3
 # tests 3
@@ -28,3 +34,4 @@ var tap = require('../')(__filename);
 tap.include('./one.js');
 tap.include('./two.js');
 tap.include('./three.js');
+

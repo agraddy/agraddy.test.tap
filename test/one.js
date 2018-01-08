@@ -5,6 +5,10 @@
 // USED IN multiple.js
 var tap = require('../')(__filename);
 
+console.log('ONE START');
 setTimeout(function() {
 	tap.assert.equal('one', 'one', 'One should pass.');
+	setTimeout(function() {
+		console.log('ONE END');
+	}, 300);
 }, 300);

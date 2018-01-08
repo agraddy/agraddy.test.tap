@@ -5,4 +5,6 @@
 // USED IN multiple.js
 var tap = require('../')(__filename);
 
+console.log('THREE START');
 tap.assert.equal('three', 'THREE', 'Three should fail.');
+console.log('THREE END');
