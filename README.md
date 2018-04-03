@@ -14,9 +14,52 @@ A testing library that focuses on simplicity. I was running into issues with [ta
 
 ## Basic Example
 
-First, create a file named `test.js`:
+First, create a file named `test1.js`:
 ```
-var tap = require('agraddy.test.tap')(__filename); // You have to pass in __filename to be able to run the test.
+// You have to pass in __filename to be able to run the test.
+var tap = require('agraddy.test.tap')(__filename);
+
+// Try a simple test.
+tap.assert.equal('actual', 'expected', 'First test for equality should fail.');
+
+tap.assert.equal('pass', 'pass', 'Second test for equality should pass.');
+
+```
+
+Now, run the file using node.
+```
+node test1.js
+```
+
+It should output:
+```
+TAP version 13
+not ok 1 - First test for equality should fail.
+  ---
+  operator: equal
+  actual: actual
+  expected: expected
+  at: Object.<anonymous> (test1.js:5:12)
+  ...
+
+1..2
+# test 2
+# pass 1
+# fail 1
+```
+
+## Notes
+
+* Each tap.assert call is considered a test. Each of the default [node assert methods](https://nodejs.org/api/assert.html) should be available. If you need one that is not implemented, just open an issue.
+* If you comment out a tap.assert call, it will be ignored.
+
+## Advanced Example
+
+### Example 2
+Create a file named `test2.js`:
+```
+// You have to pass in __filename to be able to run the test.
+var tap = require('agraddy.test.tap')(__filename);
 
 // Try a simple test.
 tap.assert.equal('actual', 'expected', 'First test for equality should fail.');
@@ -39,7 +82,7 @@ tap.assert.deepEqual({"deep": true}, {"deep": true}, 'Third test for equality sh
 
 Now, run the file using node.
 ```
-node test.js
+node test2.js
 ```
 
 It should output:
@@ -50,7 +93,7 @@ not ok 1 - First test for equality should fail.
   operator: equal
   actual: actual
   expected: expected
-  at: Object.<anonymous> (test.js:4:12)
+  at: Object.<anonymous> (test2.js:5:12)
   ...
 ok 2 - Second test for equality should pass.
 ok 3 - Third test for equality should pass.
@@ -61,14 +104,6 @@ ok 3 - Third test for equality should pass.
 # fail 1
 ```
 
-## Notes
-
-* Each tap.assert call is considered a test. Each of the default [node assert methods](https://nodejs.org/api/assert.html) should be available. If you need one that is not implemented, just open an issue.
-* If you comment out a tap.assert call, it will be ignored.
-
-## Advanced Example
-
-Coming soon.
 
 ## FAQ
 

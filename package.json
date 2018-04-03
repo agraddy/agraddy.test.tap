@@ -21,5 +21,11 @@
   },
   "devDependencies": {
     "tape": "^4.6.3"
-  }
+  },
+  "keywords": [
+    "tap",
+    "test",
+    "harness",
+    "assert"
+  ]
 }
